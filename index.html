@@ -8,151 +8,160 @@ LICENSE file in the root directory of this source tree.  -->
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryan Fae Oet Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <h4>RYAN FAE OET</h4>
-      </div>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Experience</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
     <!-- Home -->
     <section class="home" id="home">
+      <header>
+        <h4 class="logo">RYAN FAE OET</h4>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__burger"><img class="burger__icon" src="images/menu-mobile.png"></li>
+            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
       <h1 class="home__title">RYAN FAE OET</h1>
       <h3 class="home__subtitle">Software Developer & Student</h3>
-      <img src="images/arrow.png" alt="an arrow pointing down">
+      <img class="home__arrow" src="images/arrow.png" alt="an arrow pointing down">
     </section>
 
-    <!-- About -->
-    <section class="about" id="about">
-      <h2 class="section__title">ABOUT</h2>
-      <img src="images/profile.png">
-      <p>Ryan Oet is a senior at <strong>Swarthmore</strong> College, studying <strong> computer science </strong> and psychology.</p>
-      <p>He is passionate about <strong>software development</strong>, creative writing, educational video games, and FIRST Robotics. </p>
-      <p>When he’s not coding or studying, Ryan enjoys writing poetry, crocheting, listening to D&D podcasts, and playing video games.</p>
-    </section>
+    <div class="content__wrapper">
+      <!-- About -->
+      <section class="about" id="about">
+        <h2 class="section__title">ABOUT</h2>
+        <img src="images/profile.png">
+        <p>Ryan Oet is a senior at <strong>Swarthmore</strong> College, studying <strong> computer science </strong> and psychology.</p>
+        <p>He is passionate about <strong>software development</strong>, creative writing, educational video games, and FIRST Robotics. </p>
+        <p>When he’s not coding or studying, Ryan enjoys writing poetry, crocheting, listening to D&D podcasts, and playing video games.</p>
+      </section>
 
-    <!-- Experience -->
-    <section class="experience" id="experience">
-      <h2 class="section__title">EXPERIENCE</h2>
-      <div class="experience__card">
-        <p class="card__subtitle">June 2023 - Present</p>
-        <p class="card__title">Software Developer & Researcher • Algoart.org</p>
-        <p class="card__text">Worked on front-end and back-end of AlgoArt platform. Developed an API for scheduling server-side image generation of algorithmically drawn artwork. Includes client-side dashboard. Conducted user-interviews to evaluate commercialization potential of platform.</p>
-        <ul class="card__skills">
-          <li class="skills__item">HTML</li>
-          <li class="skills__item">CSS</li>
-          <li class="skills__item">JavaScript</li>
-          <li class="skills__item">PHP</li>
-          <li class="skills__item">MySQL</li>
-        </ul>
-      </div>
-      <div class="experience__card">
-        <p class="card__subtitle">June 2022 - August 2022</p>
-        <p class="card__title">Research Assistant • Northeastern University</p>
-        <p class="card__text">Contributed to natural language processing research analyzing Twitter data to connect public health information with trust in government. Constructed a custom dictionary, collected and processed millions of tweets, and created animated visualizations.</p>
-        <ul class="card__skills">
-          <li class="skills__item">Natural Language Processing</li>
-          <li class="skills__item">Twitter API</li>
-          <li class="skills__item">Python</li>
-        </ul>
-      </div>
-      <div class="experience__card">
-        <p class="card__subtitle">September 2021 - December 2022</p>
-        <p class="card__title">Computer Science Mentor • Swarthmore College</p>
-        <p class="card__text">Ran weekly study sessions for intermediate level computer science classes. Assisted students with debugging and identifying logical flaws in their code. Worked collaboratively with other peer mentors to review and polish code and fortify understandings of necessary concepts.</p>
-        <ul class="card__skills">
-          <li class="skills__item">C</li>
-          <li class="skills__item">C++</li>
-          <li class="skills__item">Debugging</li>
-          <li class="skills__item">Leadership</li>
-        </ul>
-      </div>
-      <div class="experience__card">
-        <p class="card__subtitle">May 2020 - July 2020</p>
-        <p class="card__title">Game Design Fellow • Snowbright Studio</p>
-        <p class="card__text">Worked on game development team for a mobile application. Developed introduction and settings screens, implemented a dialogue system, and wrote technical documentation. Contributed to narrative writing for characters, game world, and lore.</p>
-        <ul class="card__skills">
-          <li class="skills__item">Unity</li>
-          <li class="skills__item">Game Design</li>
-          <li class="skills__item">Scrum</li>
-          <li class="skills__item">Technical Writing</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="projects" id="projects">
-      <h2 class="section__title">PROJECTS</h2>
-      <div class="project__item">
-        <img src="images/portfolio.png" alt="screenshot of the home page of Ryan Fae Oet's website">
-        <div class="project__card">
-          <p class="card__title">Portfolio Website</p>
-          <p class="card__text">This website! Created web application to provide information on my work experience and projects. Designed, developed, and built from scratch.</p>
+      <!-- Experience -->
+      <section class="experience" id="experience">
+        <h2 class="section__title">EXPERIENCE</h2>
+        <div class="experience__card">
+          <p class="card__subtitle">June 2023 - Present</p>
+          <p class="card__title">Software Developer & Researcher • Algoart.org</p>
+          <p class="card__text">Worked on front-end and back-end of AlgoArt platform. Developed an API for scheduling server-side image generation of algorithmically drawn artwork. Includes client-side dashboard. Conducted user-interviews to evaluate commercialization potential of platform.</p>
           <ul class="card__skills">
             <li class="skills__item">HTML</li>
             <li class="skills__item">CSS</li>
             <li class="skills__item">JavaScript</li>
-            <li class="skills__item">Flask</li>
-            <li class="skills__item">Figma</li>
+            <li class="skills__item">PHP</li>
+            <li class="skills__item">MySQL</li>
           </ul>
         </div>
-      </div>
-      <div class="project__item">
-        <img src="images/avl-visualization.png" alt="screenshot of the avl tree visualizer tool">
-        <div class="project__card">
-          <p class="card__title">AVL Tree Animated Visualization Tool & Tutorial Web Application</p>
-          <p class="card__text">Co-developed educational web application on AVL trees with a tutorial, an animated visualization tool, two implementations with detailed comments, and a quiz.</p>
+        <div class="experience__card">
+          <p class="card__subtitle">June 2022 - August 2022</p>
+          <p class="card__title">Research Assistant • Northeastern University</p>
+          <p class="card__text">Contributed to natural language processing research analyzing Twitter data to connect public health information with trust in government. Constructed a custom dictionary, collected and processed millions of tweets, and created animated visualizations.</p>
           <ul class="card__skills">
-            <li class="skills__item">HTML</li>
-            <li class="skills__item">CSS</li>
-            <li class="skills__item">JavaScript</li>
-            <li class="skills__item">Flask</li>
+            <li class="skills__item">Natural Language Processing</li>
+            <li class="skills__item">Twitter API</li>
+            <li class="skills__item">Python</li>
           </ul>
         </div>
-      </div>
-      <div class="project__item">
-        <img src="images/yayb.png" alt="screenshot of the you and your baby web app">
-        <div class="project__card">
-          <p class="card__title">You and Your Baby Platform Evaluation</p>
-          <p class="card__text">Measured usage of a mobile and web app co-designed with an NGO in South Africa. Conducted user interviews, created list of recommendations for future developers, and compiled results into 30 page paper.</p>
+        <div class="experience__card">
+          <p class="card__subtitle">September 2021 - December 2022</p>
+          <p class="card__title">Computer Science Mentor • Swarthmore College</p>
+          <p class="card__text">Ran weekly study sessions for intermediate level computer science classes. Assisted students with debugging and identifying logical flaws in their code. Worked collaboratively with other peer mentors to review and polish code and fortify understandings of necessary concepts.</p>
           <ul class="card__skills">
-            <li class="skills__item">Human-Computer Interaction</li>
-            <li class="skills__item">Interviewing</li>
-            <li class="skills__item">Research</li>
+            <li class="skills__item">C</li>
+            <li class="skills__item">C++</li>
+            <li class="skills__item">Debugging</li>
+            <li class="skills__item">Leadership</li>
           </ul>
         </div>
-      </div>
-      <div class="resume">
-        <p>View Full Resume</p>
-        <img src="images/arrow-link.png">
-      </div>
-    </section>
+        <div class="experience__card">
+          <p class="card__subtitle">May 2020 - July 2020</p>
+          <p class="card__title">Game Design Fellow • Snowbright Studio</p>
+          <p class="card__text">Worked on game development team for a mobile application. Developed introduction and settings screens, implemented a dialogue system, and wrote technical documentation. Contributed to narrative writing for characters, game world, and lore.</p>
+          <ul class="card__skills">
+            <li class="skills__item">Unity</li>
+            <li class="skills__item">Game Design</li>
+            <li class="skills__item">Scrum</li>
+            <li class="skills__item">Technical Writing</li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- Contact -->
-    <section class="contact" id="contact">
-      <h2 class="section__title">CONTACT</h2>
-      <div class="contact__content">
-        <p>Ryan Oet is looking for new opportunities! Send a message about potential work or just to chat!</p>
-        <div class="socials">
-          <img src="images/github.png" alt="github logo">
-          <img src="images/linkedin.png" alt="linkedin logo">
-          <img src="images/mail.png" alt="mail icon">
+      <!-- Projects -->
+      <section class="projects" id="projects">
+        <h2 class="section__title">PROJECTS</h2>
+        <div class="project__item">
+          <img src="images/portfolio.png" alt="screenshot of the home page of Ryan Fae Oet's website">
+          <div class="project__card">
+            <p class="card__title">Portfolio Website</p>
+            <p class="card__text">This website! Created web application to provide information on my work experience and projects. Designed, developed, and built from scratch.</p>
+            <ul class="card__skills">
+              <li class="skills__item">HTML</li>
+              <li class="skills__item">CSS</li>
+              <li class="skills__item">JavaScript</li>
+              <li class="skills__item">Flask</li>
+              <li class="skills__item">Figma</li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
+        <div class="project__item">
+          <img src="images/avl-visualization.png" alt="screenshot of the avl tree visualizer tool">
+          <div class="project__card">
+            <p class="card__title">AVL Tree Animated Visualization Tool & Tutorial Web Application</p>
+            <p class="card__text">Co-developed educational web application on AVL trees with a tutorial, an animated visualization tool, two implementations with detailed comments, and a quiz.</p>
+            <ul class="card__skills">
+              <li class="skills__item">HTML</li>
+              <li class="skills__item">CSS</li>
+              <li class="skills__item">JavaScript</li>
+              <li class="skills__item">Flask</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project__item">
+          <img src="images/yayb.png" alt="screenshot of the you and your baby web app">
+          <div class="project__card">
+            <p class="card__title">You and Your Baby Platform Evaluation</p>
+            <p class="card__text">Measured usage of a mobile and web app co-designed with an NGO in South Africa. Conducted user interviews, created list of recommendations for future developers, and compiled results into 30 page paper.</p>
+            <ul class="card__skills">
+              <li class="skills__item">Human-Computer Interaction</li>
+              <li class="skills__item">Interviewing</li>
+              <li class="skills__item">Research</li>
+            </ul>
+          </div>
+        </div>
+        <div class="resume">
+          <p>View Full Resume</p>
+          <img src="images/arrow-link.png">
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact" id="contact">
+        <h2 class="section__title">CONTACT</h2>
+        <div class="contact__body">
+          <p>Ryan Oet is looking for new opportunities! Send a message about potential work or just to chat!</p>
+          <div class="socials">
+            <img src="images/github.png" alt="github logo">
+            <img src="images/linkedin.png" alt="linkedin logo">
+            <img src="images/mail.png" alt="mail icon">
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+      
+      </footer>
+    </div>
   </body>
 </html>
