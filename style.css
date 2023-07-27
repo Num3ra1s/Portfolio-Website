@@ -61,6 +61,16 @@
   .experience__cards > .card {
     width: 20rem;
   }
+
+  .projects > .project__item {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .projects > .project__item > .card, .project__item > .project__image {
+    width: 20rem;
+    height: auto;
+  }
 }
 
 body {
