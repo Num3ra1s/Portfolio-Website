@@ -172,6 +172,7 @@ a:active {text-decoration: none;}
 
 .content__wrapper {
   background: linear-gradient(var(--clr-dark), var(--clr-gradient-light));
+  padding: 2rem;
 }
 
 .section__title {
@@ -206,10 +207,11 @@ a:active {text-decoration: none;}
   margin: auto 0;
 }
 
-.experience__cards {
+.experience__cards, .projects {
   display: flex;
   flex-direction: column;
   gap: 2em;
+  justify-content: center;
   align-items: center;
 }
 
@@ -217,8 +219,9 @@ a:active {text-decoration: none;}
   background-color: var(--clr-accent-transparent);
   border: solid 0.25rem var(--clr-accent);
   border-radius: 1rem;
-  width: 40rem;
   box-shadow: var(--bs);
+  margin: 0 0.5em 0.5em 0;
+  width: 60rem;
 }
 
 .card__wrapper {
@@ -258,4 +261,31 @@ a:active {text-decoration: none;}
   margin: 0 0.3em 0.3em 0;
   box-shadow: var(--ss);
 }
+
+.project__item {
+  display: flex;
+  gap: 2em;
+}
+
+.project__image {
+  box-shadow: var(--bs);
+  margin: 0 0.5em 0.5em 0;
+  border-radius: 1rem;
+  height: 15rem;
+}
+
+.project__image, .card {
+  align-self: center;
+}
+
+.project__item > .card {
+  width: 35rem;
+}
+
+.resume {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 
