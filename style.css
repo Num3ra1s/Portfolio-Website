@@ -77,7 +77,7 @@
   }
 
   .contact__body > .socials {
-    width: 3em;
+    width: 15em;
   }
 }
 
@@ -108,7 +108,7 @@ p {font-size: var(--fs-body);}
 .home {
   background-image: url(images/background.png);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   height: 100vh;
   display: grid;
   grid-template-columns: auto;
@@ -117,7 +117,7 @@ p {font-size: var(--fs-body);}
 
 header {
   margin-top: 0;
-  padding: 2.5rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   grid-row-start: 1;
@@ -130,8 +130,18 @@ header {
   font-weight: var(--fw-reg);
 }
 
+.navbar {
+  background-color: var(--clr-dark);
+}
+
 .nav {
   margin: auto 0;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .nav__list {

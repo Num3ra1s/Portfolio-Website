@@ -18,21 +18,24 @@ LICENSE file in the root directory of this source tree.  -->
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+      <h4 class="logo">RYAN FAE OET</h4>
+      <nav class="nav">
+        <ul class="nav__list">
+          <button class="nav__burger"><img class="burger__icon" src="images/menu-mobile.png"></button>
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
     <!-- Home -->
     <section class="home" id="home">
-      <header>
-        <h4 class="logo">RYAN FAE OET</h4>
-        <nav class="nav">
-          <ul class="nav__list">
-            <button class="nav__burger"><img class="burger__icon" src="images/menu-mobile.png"></button>
-            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
-            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
       <h1 class="home__title">RYAN FAE OET</h1>
       <h3 class="home__subtitle">Software Developer & Student</h3>
       <a class="arrow__link" href="#about"><img class="home__arrow" src="images/arrow.png" alt="an arrow pointing down"></a>
@@ -181,9 +184,9 @@ LICENSE file in the root directory of this source tree.  -->
           <div class="contact__body">
             <p class="contact__text">Ryan Oet is looking for new opportunities! Send a message about potential work or just to chat!</p>
             <div class="socials">
-              <a href="https://github.com/Num3ra1s"><img class="social__icon" src="images/github.png" alt="github logo"></a>
-              <a href="https://www.linkedin.com/in/ryan-oet/"><img class="social__icon" src="images/linkedin.png" alt="linkedin logo"></a>
-              <a href="mailto:ryanfaeoet@gmail.com"><img class="social__icon" src="images/mail.png" alt="mail icon"></a>
+              <a href="https://github.com/Num3ra1s"><img class="social__icon" id="github" src="images/github.png" alt="github logo" onmouseover="emphasize(this)" onmouseout="deemphasize(this)"></a>
+              <a href="https://www.linkedin.com/in/ryan-oet/"><img class="social__icon" id="linkedin" src="images/linkedin.png" alt="linkedin logo" onmouseover="emphasize(this)" onmouseout="deemphasize(this)"></a>
+              <a href="mailto:ryanfaeoet@gmail.com"><img class="social__icon" id="mail" src="images/mail.png" alt="mail icon" onmouseover="emphasize(this)" onmouseout="deemphasize(this)"></a>
             </div>
           </div>
         </div>
@@ -194,5 +197,6 @@ LICENSE file in the root directory of this source tree.  -->
       
       </footer>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
