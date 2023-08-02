@@ -71,6 +71,14 @@
     width: 20rem;
     height: auto;
   }
+
+  .contact__body > .contact__text {
+    width: 20em;
+  }
+
+  .contact__body > .socials {
+    width: 3em;
+  }
 }
 
 body {
@@ -173,7 +181,7 @@ a:active {text-decoration: none;}
   align-self: center;
 }
 
-.home__arrow {
+.arrow__link {
   width: 3rem;
   grid-row-start: 5;
   justify-self: center;
@@ -298,4 +306,26 @@ a:active {text-decoration: none;}
   gap: 1rem;
 }
 
+.contact__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.contact__text {
+  text-align: center;
+  width: 30em;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2em;
+  margin: 0 0 3em 0;
+}
+
+.social__icon {
+  width: 5em;
+}
