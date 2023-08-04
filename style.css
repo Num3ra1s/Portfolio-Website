@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   --ff-primary: 'Amiko', sans-serif;
   
@@ -22,9 +26,11 @@
   --fs-h3: 3rem;
   --fs-h4: 1.75rem;
   --fs-body: 1.5rem;
+  --fs-small: 0.75rem;
 
   --ts: var(--clr-dark) 0.05em 0.05em 0.03em;
   --bs: var(--clr-dark) 0.5em 0.5em 0.03em;
+  --bs-link: var(--clr-dark) 0.5em 0.5em 0.5em;
   --ss: var(--clr-dark) 0.3em 0.3em 0.03em;
 }
 
@@ -36,7 +42,13 @@
     --fs-h3: 2rem;
     --fs-h4: 1.5rem;
     --fs-body: 1rem;
+    --fs-small: 0.5rem;
   }
+
+  body > .navbar {
+    padding: .75rem;
+  }
+
   .nav__list > .nav__burger {
     display: inline;
   }
@@ -44,6 +56,7 @@
     display: none;
   }
   .section__wrapper > .about__body {
+    padding: 0;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
@@ -67,7 +80,7 @@
     gap: 1em;
   }
 
-  .projects > .project__item > .card, .project__item > .project__image {
+  .projects > .project__item > .card, .project__link > .project__image {
     width: 20rem;
     height: auto;
   }
@@ -168,6 +181,9 @@ header {
   color: var(--clr-light);
 }
 
+a {
+  color: var(--clr-light);
+}
 a:link {text-decoration: none;}
 a:visited {text-decoration: none;}
 a:hover {text-decoration: none; color: var(--clr-accent);}
@@ -196,6 +212,16 @@ a:active {text-decoration: none;}
   grid-row-start: 5;
   justify-self: center;
   align-self: center;
+}
+
+.attribution {
+  grid-row-start: 6;
+  justify-self: end;
+  align-self: flex-end;
+  margin: 0;
+  padding: 1em;
+  font-size: var(--fs-small);
+  color: var(--clr-gradient-light);
 }
 
 .content__wrapper {
@@ -296,13 +322,23 @@ a:active {text-decoration: none;}
 }
 
 .project__image {
-  box-shadow: var(--bs);
   margin: 0 0.5em 0.5em 0;
   border-radius: 1rem;
   height: 15rem;
 }
 
-.project__image, .card {
+.project__image:hover {
+  /* box-shadow:
+  0 2.8px 2.2px #14081611,
+  0 6.7px 5.3px #14081611,
+  0 12.5px 10px #1408161f,
+  0 22.3px 17.9px #1408161f,
+  0 41.8px 33.4px #1408161f,
+  0 100px 80px #1408161f; */
+  box-shadow: var(--bs-link);
+}
+
+.project__link, .card {
   align-self: center;
 }
 
