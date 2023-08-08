@@ -30,7 +30,7 @@
 
   --ts: var(--clr-dark) 0.05em 0.05em 0.03em;
   --bs: var(--clr-dark) 0.5em 0.5em 0.03em;
-  --bs-link: var(--clr-dark) 0.5em 0.5em 0.5em;
+  --bs-link: var(--clr-light) 0 0 0.5em 0.25em;
   --ss: var(--clr-dark) 0.3em 0.3em 0.03em;
 }
 
@@ -323,6 +323,7 @@ a:active {text-decoration: none;}
 
 .project__image {
   margin: 0 0.5em 0.5em 0;
+  border: solid 0.25rem var(--clr-dark);
   border-radius: 1rem;
   height: 15rem;
 }
