@@ -22,14 +22,16 @@ LICENSE file in the root directory of this source tree.  -->
     <!-- Navigation -->
     <header class="navbar" id="navbar">
       <h4 class="logo">RYAN FAE OET</h4>
-      <nav class="nav">
+      <button class="nav__toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav" id="nav">
         <ul class="nav__list">
-          <button class="nav__burger"><img class="burger__icon" src="images/menu-mobile.png"></button>
-          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
-          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+          <li class="nav__item"><a href="#home" class="nav__link" onclick="closeMenu()">Home</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link" onclick="closeMenu()">About</a></li>
+          <li class="nav__item"><a href="#experience" class="nav__link" onclick="closeMenu()">Experience</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link" onclick="closeMenu()">Projects</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link" onclick="closeMenu()">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -124,9 +126,8 @@ LICENSE file in the root directory of this source tree.  -->
       <section class="projects" id="projects">
         <div class="section__wrapper">
           <h2 class="section__title">PROJECTS</h2>
-          <div class="projects">
+          <div class="project__items">
             <div class="project__item">
-              <!-- add link to this site -->
               <a href="#home" class="project__link"><img class="project__image" src="images/portfolio.png" alt="screenshot of the home page of Ryan Fae Oet's website"></a>
               <div class="card">
                 <div class="card__wrapper">
