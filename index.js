@@ -1,3 +1,9 @@
+// Copyright (c) 2023, Ryan Fae Oet
+// All rights reserved.
+
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree. 
+
 // When the user scrolls the page, execute stickyNav
 window.onscroll = function() {stickyNav()};
 
@@ -6,6 +12,14 @@ const navToggle = document.querySelector('.nav__toggle');
 navToggle.addEventListener('click', () => {
     document.body.classList.toggle('nav__open');
 });
+
+// Close mobile menu when link is selected
+const navLinks = document.querySelectorAll('.nav__link')
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+      document.body.classList.remove('nav__open');
+  })
+})
 
 // Change image to emphasized on hover
 function emphasize(img) {
@@ -39,32 +53,5 @@ function stickyNav() {
     navbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");
-  }
-}
-
-// Open menu on mobile
-function mobileMenu() {
-  var checked = document.getElementById("side__menu").checked;
-  console.log(checked);
-  var nav = document.getElementById("navbar");
-  var menu = document.getElementById("nav");
-  if(checked) {
-    nav.style.height = "100%";
-    menu.style.display = "block";
-  } else {
-    nav.style.height = "auto";
-    menu.style.display = "none";
-  }
-}
-
-// Close mobile menu
-function closeMenu() {
-  if(screen.width < 1000) {
-    var nav = document.getElementById("navbar");
-    var menu = document.getElementById("nav");
-    var checked = document.getElementById("side__menu");
-    nav.style.height = "auto";
-    menu.style.display = "none";
-    checked.checked = false;
   }
 }
