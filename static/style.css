@@ -36,7 +36,7 @@ LICENSE file in the root directory of this source tree.  */
 
   --ts: var(--clr-dark) 0.05em 0.05em 0.03em;
   --bs: var(--clr-dark) 0.5em 0.5em 0.03em;
-  --bs-link: var(--clr-light) 0 0 0.5em 0.25em;
+  --bs-link: var(--clr-light) 0 0 0.5em 0.05em;
   --ss: var(--clr-dark) 0.3em 0.3em 0.03em;
 }
 
@@ -54,16 +54,22 @@ LICENSE file in the root directory of this source tree.  */
 
   /* Navigation */
 
+  body {
+    pointer-events: auto;
+  }
+
   body > .navbar {
     background-color: transparent;
     padding: 0;
     width: 100vw;
     height: 100vh;
+    pointer-events: none; 
   }
 
   .navbar > .header__wrapper {
     background-color: var(--clr-dark);
     padding: .75rem;
+    pointer-events: auto;
   }
 
   .header__wrapper > .logo {
@@ -132,6 +138,10 @@ LICENSE file in the root directory of this source tree.  */
   .project__items > .project__item > .card, .project__link > .project__image {
     width: 20rem;
     height: auto;
+  }
+
+  .project__image {
+    box-shadow: var(--bs-link);
   }
 
   /* Contact Section */
@@ -233,10 +243,10 @@ h4 {font-size: var(--fs-h4);}
 p {font-size: var(--fs-body);}
 
 a {color: var(--clr-light);}
-a:link {text-decoration: none;}
-a:visited {text-decoration: none;}
-a:hover {text-decoration: none; color: var(--clr-accent);}
-a:active {text-decoration: none;}
+a:link {text-decoration: underline;}
+a:visited {text-decoration: underline;}
+a:hover {text-decoration: underline; color: var(--clr-accent);}
+a:active {text-decoration: underline;}
 
 /* Navigation */
 
@@ -319,6 +329,16 @@ a:active {text-decoration: none;}
 
 .nav__link {
   color: var(--clr-light);
+}
+
+.nav__link:link {text-decoration: none;}
+.nav__link:visited {text-decoration: none;}
+.nav__link:hover {text-decoration: none;}
+.nav__link:active {text-decoration: none;}
+
+
+.nav__open .navbar {
+  pointer-events: auto;
 }
 
 .nav__open .nav {

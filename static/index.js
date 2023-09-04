@@ -24,22 +24,22 @@ navLinks.forEach(link => {
 // Change image to emphasized on hover
 function emphasize(img) {
  if(img.id === "github") {
-  img.src = "images/github-emphasis.png";
+  img.src = "static/images/github-emphasis.png";
  } else if(img.id === "linkedin") {
-  img.src = "images/linkedin-emphasis.png";
+  img.src = "static/images/linkedin-emphasis.png";
  } else if(img.id === "mail") {
-  img.src = "images/mail-emphasis.png";
+  img.src = "static/images/mail-emphasis.png";
  }
 }
 
 // Change image to deemphasized after hovering
 function deemphasize(img) {
   if(img.id === "github") {
-   img.src = "images/github.png";
+   img.src = "static/images/github.png";
   } else if(img.id === "linkedin") {
-   img.src = "images/linkedin.png";
+   img.src = "static/images/linkedin.png";
   } else if(img.id === "mail") {
-   img.src = "images/mail.png";
+   img.src = "static/images/mail.png";
   }
 }
 
@@ -54,4 +54,8 @@ function stickyNav() {
   } else {
     navbar.classList.remove("sticky");
   }
+}
+
+function test() {
+  console.log("test");
 }

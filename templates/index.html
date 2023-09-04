@@ -15,7 +15,7 @@ LICENSE file in the root directory of this source tree.  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}">
   </head>
   <body>
 
@@ -42,7 +42,7 @@ LICENSE file in the root directory of this source tree.  -->
     <section class="home" id="home">
       <h1 class="home__title">RYAN FAE OET</h1>
       <h3 class="home__subtitle">Software Developer & Student</h3>
-      <a class="arrow__link" href="#about"><img class="home__arrow" src="images/arrow.png" alt="an arrow pointing down"></a>
+      <a class="arrow__link" href="#about"><img class="home__arrow" src="{{ url_for('static', filename= 'images/arrow.png') }}" alt="an arrow pointing down"></a>
       <p class="attribution">Background photo by Pawel Czerwinski on Unsplash</p>
     </section>
 
@@ -52,7 +52,7 @@ LICENSE file in the root directory of this source tree.  -->
         <div class="section__wrapper">
           <h2 class="section__title">ABOUT</h2>
           <div class="about__body">
-            <img class="about__image" src="images/profile.png">
+            <img class="about__image" src= "{{ url_for('static', filename= 'images/profile.png') }}">
             <div class="about__text">
               <p>Ryan Fae Oet is a senior at <strong>Swarthmore</strong> College, studying <strong> computer science </strong> and psychology.</p>
               <p>He is passionate about <strong>software development</strong>, creative writing, educational video games, and FIRST Robotics. </p>
@@ -130,7 +130,7 @@ LICENSE file in the root directory of this source tree.  -->
           <h2 class="section__title">PROJECTS</h2>
           <div class="project__items">
             <div class="project__item">
-              <a href="#home" class="project__link"><img class="project__image" src="images/portfolio.png" alt="screenshot of the home page of Ryan Fae Oet's website"></a>
+              <a href="#home" class="project__link"><img class="project__image" src="{{ url_for('static', filename= 'images/portfolio.png') }}" alt="screenshot of the home page of Ryan Fae Oet's website"></a>
               <div class="card">
                 <div class="card__wrapper">
                   <p class="card__title">Portfolio Website</p>
@@ -146,7 +146,7 @@ LICENSE file in the root directory of this source tree.  -->
               </div>
             </div>
             <div class="project__item">
-              <a href="https://introtoavl.pythonanywhere.com/" target="_blank" class="project__link"><img class="project__image" src="images/avl-visualization.png" alt="screenshot of the avl tree visualizer tool"></a>
+              <a href="https://introtoavl.pythonanywhere.com/" target="_blank" class="project__link"><img class="project__image" src="{{ url_for('static', filename= 'images/avl-visualization.png') }}" alt="screenshot of the avl tree visualizer tool"></a>
               <div class="card">
                 <div class="card__wrapper">
                   <p class="card__title">AVL Tree Animated Visualization Tool & Tutorial Web Application</p>
@@ -161,7 +161,7 @@ LICENSE file in the root directory of this source tree.  -->
               </div>
             </div>
             <div class="project__item">
-              <a href="paper.pdf" target="_blank" class="project__link"><img class="project__image" src="images/yayb.png" alt="screenshot of the you and your baby web app"></a>
+              <a href="{{ url_for('static', filename= 'paper.pdf') }}" target="_blank" class="project__link"><img class="project__image" src="{{ url_for('static', filename= 'images/yayb.png') }}" alt="screenshot of the you and your baby web app"></a>
               <div class="card">
                 <div class="card__wrapper">
                   <p class="card__title">You and Your Baby Platform Evaluation</p>
@@ -175,7 +175,7 @@ LICENSE file in the root directory of this source tree.  -->
                 </div>
               </div>
             </div>
-            <a href="resume.pdf" target="_blank"><p>View Full Resume</p></a>
+            <a href="{{ url_for('static', filename= 'resume.pdf') }}" target="_blank"><p>View Full Resume</p></a>
           </div>
         </div>
       </section>
@@ -187,14 +187,14 @@ LICENSE file in the root directory of this source tree.  -->
           <div class="contact__body">
             <p class="contact__text">Ryan Fae Oet is looking for new opportunities! Send a message about potential work or just to chat!</p>
             <div class="socials">
-              <a href="https://github.com/Num3ra1s"><img class="social__icon" id="github" src="images/github.png" alt="github logo" onmouseover="emphasize(this)" onmouseout="deemphasize(this)"></a>
-              <a href="https://www.linkedin.com/in/ryan-oet/"><img class="social__icon" id="linkedin" src="images/linkedin.png" alt="linkedin logo" onmouseover="emphasize(this)" onmouseout="deemphasize(this)"></a>
-              <a href="mailto:ryanfaeoet@gmail.com"><img class="social__icon" id="mail" src="images/mail.png" alt="mail icon" onmouseover="emphasize(this)" onmouseout="deemphasize(this)"></a>
+              <a href="https://github.com/Num3ra1s" target="_blank"><img class="social__icon" id="github" src="{{ url_for('static', filename= 'images/github.png') }}" alt="github logo" onmouseover="emphasize(this)" onmouseout="deemphasize(this)"></a>
+              <a href="https://www.linkedin.com/in/ryan-oet/" target="_blank"><img class="social__icon" id="linkedin" src="{{ url_for('static', filename= 'images/linkedin.png') }}" alt="linkedin logo" onmouseover="emphasize(this)" onmouseout="deemphasize(this)"></a>
+              <a href="mailto:ryanfaeoet@gmail.com" target="_blank"><img class="social__icon" id="mail" src="{{ url_for('static', filename= 'images/mail.png') }}" alt="mail icon" onmouseover="emphasize(this)" onmouseout="deemphasize(this)"></a>
             </div>
           </div>
         </div>
       </section>
     </div>
-    <script src="index.js"></script>
+    <script src="{{ url_for('static', filename= 'index.js') }}"></script>
   </body>
 </html>
