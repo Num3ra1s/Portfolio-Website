@@ -23,24 +23,12 @@ navLinks.forEach(link => {
 
 // Change image to emphasized on hover
 function emphasize(img) {
- if(img.id === "github") {
-  img.src = "static/images/github-emphasis.png";
- } else if(img.id === "linkedin") {
-  img.src = "static/images/linkedin-emphasis.png";
- } else if(img.id === "mail") {
-  img.src = "static/images/mail-emphasis.png";
- }
+ img.classList.add("fa-beat")
 }
 
 // Change image to deemphasized after hovering
 function deemphasize(img) {
-  if(img.id === "github") {
-   img.src = "static/images/github.png";
-  } else if(img.id === "linkedin") {
-   img.src = "static/images/linkedin.png";
-  } else if(img.id === "mail") {
-   img.src = "static/images/mail.png";
-  }
+  img.classList.remove("fa-beat")
 }
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
@@ -54,8 +42,4 @@ function stickyNav() {
   } else {
     navbar.classList.remove("sticky");
   }
-}
-
-function test() {
-  console.log("test");
 }

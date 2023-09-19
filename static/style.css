@@ -21,11 +21,19 @@ LICENSE file in the root directory of this source tree.  */
   --fw-semibold: 600;
   --fw-bold: 700;
   
-  --clr-light: #F4EBFF;
+  /* --clr-light: #F4EBFF;
   --clr-dark: #140816;
   --clr-accent: #A677E0;
   --clr-accent-transparent: #a677e04d;
-  --clr-gradient-light: #5B3F7E;
+  --clr-gradient-light: #5B3F7E; */
+
+  --clr-light: #F4EBFF;
+  --clr-dark: #1E0957;
+  --clr-accent: #1E0957;
+  --clr-accent2: #EEB740;
+  --clr-accent-transparent: #1E09574d;
+  --clr-gradient-top: #EEB740;
+  --clr-gradient-bottom: #A012A4; 
 
   --fs-h1: 8rem;
   --fs-h2: 5rem;
@@ -102,6 +110,16 @@ LICENSE file in the root directory of this source tree.  */
     font-size: var(--fs-h2);
   }
 
+  /* Home Section */
+
+  body > .home {
+    grid-template-rows: 20fr auto 5fr 5fr 5fr 5fr 5fr;
+  }
+
+  .home > .home__title {
+    margin: 0 0.7em;
+  }
+  
   /* About Section */
 
   .section__wrapper > .about__body {
@@ -116,7 +134,11 @@ LICENSE file in the root directory of this source tree.  */
     order: 2;
   }
 
-  .about__body > .about__text {
+  .about__body > .card {
+    width: 20rem;
+  }
+
+  .card__wrapper > .about__text {
     text-align: center;
     width: auto;
     order: 1;
@@ -170,7 +192,8 @@ img {
 }
 
 .content__wrapper {
-  background: linear-gradient(var(--clr-dark), var(--clr-gradient-light));
+  /* background: linear-gradient(var(--clr-dark), var(--clr-gradient-light)); */
+  background: linear-gradient(var(--clr-gradient-top), var(--clr-gradient-bottom));
   padding: 2rem;
 }
 
@@ -178,9 +201,9 @@ img {
   margin: 1.5em 0 0.75em 0;
   padding-top: 1.5em;
   text-align: center;
-  color: var(--clr-accent);
+  color: var(--clr-light);
   text-decoration: underline;
-  text-underline-offset: 0.1em;
+  text-underline-offset: 0.2em;
 }
 
 .card {
@@ -223,7 +246,7 @@ img {
   font-size: var(--fs-body);
   color: var(--clr-dark);
   font-weight: var(--fw-bold);
-  background-color: var(--clr-accent);
+  background-color: var(--clr-accent2);
   border-radius: 0.5em;
   padding: 0.25em 0.5em;
   margin: 0 0.3em 0.3em 0;
@@ -243,10 +266,10 @@ h4 {font-size: var(--fs-h4);}
 p {font-size: var(--fs-body);}
 
 a {color: var(--clr-light);}
-a:link {text-decoration: underline;}
-a:visited {text-decoration: underline;}
-a:hover {text-decoration: underline; color: var(--clr-accent);}
-a:active {text-decoration: underline;}
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none; color: var(--clr-accent2);}
+a:active {text-decoration: none;}
 
 /* Navigation */
 
@@ -266,7 +289,7 @@ a:active {text-decoration: underline;}
   margin: auto 0;
   grid-row-start: 1;
   grid-column-start: 1;
-  font-weight: var(--fw-reg);
+  font-weight: var(--fw-bold);
 }
 
 .nav__toggle {
@@ -366,17 +389,18 @@ a:active {text-decoration: underline;}
 /* Home Section */
 
 .home {
-  background-image: url(images/background.png);
+  background-image: url(images/background1.png);
   background-size: cover;
-  background-position: top;
+  background-position: bottom left;
+  /* background-position: left; */
   height: 100vh;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 32fr auto 8fr 8fr 8fr 8fr;
+  grid-template-rows: 34fr auto 5fr 5fr 8fr 8fr 8fr;
 }
 
 .home__title{
-  margin: 0 0.75em;
+  margin: 0 0.3em;
   padding: 0;
   text-align: center;
   grid-row-start: 2;
@@ -384,8 +408,8 @@ a:active {text-decoration: underline;}
   align-self: center;
 }
 
-.home__subtitle {
-  margin: 0 0.75em;
+.home__subtitle1, .home__subtitle2 {
+  margin: 0 0.3em;
   padding: 0;
   text-align: center;
   grid-row-start: 3;
@@ -393,15 +417,19 @@ a:active {text-decoration: underline;}
   align-self: center;
 }
 
+.home__subtitle2 {
+  grid-row-start: 4;
+}
+
 .arrow__link {
   width: 3rem;
-  grid-row-start: 5;
+  grid-row-start: 6;
   justify-self: center;
   align-self: center;
 }
 
 .attribution {
-  grid-row-start: 6;
+  grid-row-start: 7;
   justify-self: end;
   align-self: flex-end;
   margin: 0;
@@ -426,12 +454,12 @@ a:active {text-decoration: underline;}
   height: 30%;
   border: solid 0.25rem var(--clr-accent);
   border-radius: 1rem;
+  box-shadow: var(--bs);
   background-color: var(--clr-accent-transparent);
 }
 
 .about__text {
-  text-align: end;
-  width: 35rem;
+  text-align: center;
   margin: auto 0;
 }
 
@@ -472,9 +500,10 @@ a:active {text-decoration: underline;}
 }
 
 .resume {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem; */
+  font-weight: var(--fw-bold);
 }
 
 /* Contact Section */
