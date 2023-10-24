@@ -277,7 +277,7 @@ a:active {text-decoration: none;}
   margin-top: 0;
   display: flex;
   justify-content: space-between;
-  height: min-content;
+  height: 60px;
   background-color: var(--clr-dark);
   padding: 1rem;
   display: grid;
