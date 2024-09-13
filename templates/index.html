@@ -147,8 +147,8 @@ LICENSE file in the root directory of this source tree.  -->
         <div class="section__wrapper">
           <h2 class="section__title">PROJECTS</h2>
           <div class="project__items">
-            <div class="project__item"></div>
-              <img class="project__image" src="{{ url_for('static', filename= 'images/teamworks.png') }}" alt="screenshot of the associate details page of the TeamWorks website">
+            <div class="project__item">
+              <a class="project__link"><img class="project__image" src="{{ url_for('static', filename= 'images/teamworks.png') }}" alt="screenshot of the associate details page of the TeamWorks website"></a>
               <div class="card">
                 <div class="card__wrapper">
                   <p class="card__title">TeamWorks Web Application</p>
@@ -162,6 +162,21 @@ LICENSE file in the root directory of this source tree.  -->
                   </ul>
                 </div>
               </div>
+            </div>
+            <div class="project__item"></div>
+              <a href="https://social.cs.swarthmore.edu/@PetitionBot" class="project__link"><img class="project__image" src="{{ url_for('static', filename= 'images/teamworks.png') }}" alt="screenshot of the associate details page of the TeamWorks website"></a>
+              <div class="card">
+                <div class="card__wrapper">
+                  <p class="card__title">PetitionBot</p>
+                  <p class="card__text">Lead the development of a web application integrated with the Mastodon API. Allows users to submit Change.org petitions to be posted on PetitionBot Mastodon account, view petitions stored in database, view user discussions under petition posts, and download analytics.</p>
+                  <ul class="card__skills">
+                    <li class="skills__item">Flask</li>
+                    <li class="skills__item">Jinja</li>
+                    <li class="skills__item">SQL Alchemy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             <div class="project__item">
               <a href="#home" class="project__link"><img class="project__image" src="{{ url_for('static', filename= 'images/portfolio1.png') }}" alt="screenshot of the home page of Ryan Fae Oet's website"></a>
               <div class="card">
